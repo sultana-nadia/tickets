@@ -32,6 +32,22 @@ for (const btn of allBtn){
     });
 }
 
+function grandTotalPrice(category){
+    const totalPrice = document.getElementById("total-cost").innerText;
+    const convertedTotalCost = parseInt(totalPrice);
+
+    if(category == "NEW15"){
+        setInnerText("grand-total-price", convertedTotalCost * 0.85);
+    }
+    else if(category == "Couple 20"){
+        setInnerText("grand-total-price", convertedTotalCost * 0.80);
+    }
+    else{
+        setInnerText("grand-total-price", convertedTotalCost);
+    }
+}
+
+
 function totalPrice(id, value){
     const totalPrice = document.getElementById(id).innerText;
     const convertedTotalCost = parseInt(totalPrice);
