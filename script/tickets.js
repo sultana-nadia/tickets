@@ -88,8 +88,8 @@ for(let i = 0; i < addButtons.length; i++){
 
 let selectedButtonCount = 0;
 
-for (let i = 0; i < allBtn.length; i++){
-    allBtn[i].addEventListener('click', function(){
+for (let i = 0; i < addButtons.length; i++){
+    addButtons[i].addEventListener('click', function(){
         if(!this.disabled){
             let currentSeats = parseInt(document.getElementById('current-seat').innerText);
             
@@ -99,10 +99,10 @@ for (let i = 0; i < allBtn.length; i++){
 
                 if(selectedButtonCount === 4){
                     alert("You have selected 4 seats");
-                    for (let j = 0; j < allBtn.length; j++){
+                    for (let j = 0; j < addButtons.length; j++){
 
-                        if (!allBtn[j].disabled){
-                            allBtn[j].disabled = true;
+                        if (!addButtons[j].disabled){
+                            addButtons[j].disabled = true;
                         }
                     }
                 }
