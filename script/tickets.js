@@ -33,13 +33,13 @@ for (const btn of allBtn){
 }
 
 function grandTotalPrice(category){
-    const totalPrice = document.getElementById("total-cost").innerText;
-    const convertedTotalCost = parseInt(totalPrice);
+    const totalPrice = document.getElementById("total-Price").innerText;
+    const convertedTotalCost = parseInt(totalPrice.innerText);
 
-    if(category == "NEW15"){
+    if(category === "NEW15"){
         setInnerText("grand-total-price", convertedTotalCost * 0.85);
     }
-    else if(category == "Couple 20"){
+    else if(category === "Couple 20"){
         setInnerText("grand-total-price", convertedTotalCost * 0.80);
     }
     else{
@@ -80,8 +80,37 @@ for(let i = 0; i < addButtons.length; i++){
             currentSeats--;
             document.getElementById('current-seat').innerText = currentSeats;
         } 
+
     });
 }
+
+
+
+let selectedButtonCount = 0;
+
+for (let i = 0; i < addButtons.length; i++) {
+    addButtons[i].addEventListener('click', function() {
+        if (!this.disabled) {
+            let currentSeats = parseInt(document.getElementById('current-seat').innerText);
+            
+            if(currentSeats > 0 && selectedButtonCount < 5) {
+                selectedButtonCount++;
+                this.disabled = true;
+
+                if (selectedButtonCount === 4) {
+                    alert("You have selected 4 seats");
+                    for (let j = 0; j < addButtons.length; j++) {
+                        if (!addButtons[j].disabled) {
+                            addButtons[j].disabled = true;
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+
 
 
 

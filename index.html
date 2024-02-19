@@ -33,8 +33,8 @@
                   </div>
                   <a class="btn btn-ghost text-3xl font-bold">P-Ticket</a>
                 </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
+                <div class="navbar-center">
+                  <ul class="menu menu-horizontal px-1 ">
                     <li><a>Home</a></li>
                     <li><a>About</a></li>
                     <li><a>Destination</a></li>
@@ -237,7 +237,7 @@
                             <div class="pt-4"><hr></div>
                             
                             <ul id="selected-place-container" class="selected-place-container w-[200px]">
-                                
+                                <li class="noop"></li>
                             </ul>
 
                         </div>
@@ -246,8 +246,8 @@
                             <p class="font-bold">BDT <span id="total-price">0</span></p>
                         </div><br>
                             <div class="flex justify-between">
-                                <input id="grandTotalPrice" onclick="grandTotalPrice('NEW15','Couple 20')" class="p-2" type="text" placeholder="Have any cupon">
-                                <button id="grandTotalPrice" onclick="grandTotalPrice('NEW15','Couple 20')" class="btn bg-green-500 text-white font-bold">APPLY</button>
+                                <input class="p-2" type="text" placeholder="Have any coupon">
+                                <button id="grandTotalPrice" onclick="grandTotalPrice('NEW15')" class="btn bg-green-500 text-white font-bold">APPLY</button>
                             </div>
                             <div class="pt-4"><hr></div>
                             <div class="flex justify-between">

@@ -1,8 +1,8 @@
 li{
     display: flex;
     text-align: center;
-    gap: 270px;
     width: 200px;
+    gap: 270px;
 }
 
 
