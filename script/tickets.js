@@ -4,8 +4,30 @@ let count = 0;
 for (const btn of allBtn){
     btn.addEventListener("click", function(event){
         count = count + 1;
-        document.getElementById("cart-count").innerText = count;
+
+        const ticketName = event.target.childNodes[0];
+        const ticketPrice = event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[1].childNodes[1].childNodes[9].childNodes[3].childNodes[0];
+
+        const selectedContainer = document.getElementById("selected-place-container");
+
+        const li = document.createElement("li");
+
+        const p = document.createElement("p");
+        p.innerText = ticketName;
+        const p2 = document.createElement("p");
+        p2.innerText = ticketPrice;
+
+        li.appendChild(p);
+        li.appendChild(p2);
+        selectedContainer.appendChild(li);
+
+
+
+        setInnerText("cart-count", count);
     });
+}
+function setInnerText(id, value){
+    document.getElementById(id).innerText = value;
 }
 
 // availableseat ar price
@@ -34,6 +56,9 @@ for(let i = 0; i < addButtons.length; i++){
         } 
     });
 }
+// appendchild
+
+
 
 // decrease seats
 // const addButtons = document.querySelectorAll(".add-btn");

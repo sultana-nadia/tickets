@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-5</title>
+
+    <link rel="stylesheet" href="styles/style.css">
     <!-- daisy ui n tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -175,7 +177,7 @@
         <!-- poribohor part ended -->
 
         <!-- select seat part started -->
-        <section class="container mx-auto lg:px-10 pb-16">
+        <section class="container mx-auto lg:px-10 pb-28">
             <div class="mx-auto bg-white h-[400px] w-full rounded-xl p-4">
                 <div class="lg:flex lg:justify-evenly">
                     <div>
@@ -189,7 +191,7 @@
                                </div>
                                <div class="flex">
                                   <img class="h-6" src="./images/seat-green-filled.png" alt="">
-                                  <p>Available</p>
+                                  <p>Selected</p>
                                </div>
                             </div>
                             <div class="pt-4"><hr></div>
@@ -221,23 +223,28 @@
                     </div>
                     <div class="-ml-[90px]">
                         <h1 class="font-serif font-bold text-xl pb-2">Select Your Seat</h1>
-                        <div class="w-[340px] bg-slate-100 p-3 rounded-lg h-[90px]">
+                        <div class="w-[340px] bg-slate-100 p-3 rounded-lg">
                             <div class="flex justify-between">
                                 <div class="flex gap-1">
                                     <p class="font-bold">Seat</p>
                                     <span id="cart-count" class="border-2 px-2 rounded-lg bg-green-400 text-white">0</span>
                                 </div>
-                                <p class="font-bold">Class</p>
+                                <!-- <p class="font-bold">Class</p> -->
                                 <p class="font-bold">Price</p>
                             </div>
                             <div class="pt-4"><hr></div>
+                            
+                            <ul id="selected-place-container" class="selected-place-container w-[200px]">
+                                
+                            </ul>
+
                         </div>
                         <div class="flex justify-between">
                             <h1 class="font-bold">Total Price</h1>
                             <p id="total-price" class="font-bold">BDT <span>0</span></p>
                         </div><br>
                             <div class="flex justify-between">
-                                <input class="border-none" type="text" placeholder="Have any cupon">
+                                <input class="p-2" type="text" placeholder="Have any cupon">
                                 <button class="btn bg-green-500 text-white font-bold">APPLY</button>
                             </div>
                             <div class="pt-4"><hr></div>

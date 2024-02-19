@@ -1,0 +1,6 @@
+li{
+    display: flex;
+    text-align: center;
+    gap: 210px;
+    width: 200px;
+}
